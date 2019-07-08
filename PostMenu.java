@@ -109,13 +109,14 @@ public class PostMenu {
 
     //pick a user
     public User pickUser() {
+        User user = new User();
         System.out.println("Please pick a user.");
         int pickOne;
-        User user = new User();
         for (int i = 0; i < userLog.size(); i++) {
             System.out.println(i+" "+userLog.get(i).getUsername());
         }
-        pickOne = keyboard.nextInt();
+        pickOne=keyboard.nextInt();
+        user = userLog.get(pickOne);
         return user;
     }
 
